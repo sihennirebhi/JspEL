@@ -8,11 +8,15 @@
 </head>
 <body>
 	
-	<%
+	<%-- <%
 		String name = (String) request.getAttribute("label");
 		out.println(name);
 	
-	%>
+	%> --%>
+	
+	
+	<!-- using EL -->
+	${label}
 		
 </body>
 </html>
