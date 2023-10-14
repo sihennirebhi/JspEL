@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%> <!--jakarta.servlet.jsp.jstl-api-2.0.0.jar  jakarta.servlet.jsp.jstl-2.0.0 (1).jar--> 
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,7 +18,11 @@
 	
 	
 	<!-- using EL -->
-	${label}
+	<!--${label}-->
+	
+	<c:out value="label" />
+	
+	
 		
 </body>
 </html>
