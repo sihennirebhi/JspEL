@@ -20,8 +20,8 @@
 	<!-- using EL -->
 	<!--${label}-->
 	
-	<c:out value="label" />
-	
+	<c:out value="${Student}" />
+	<%-- <c:import url="http://www.facebook.com"></c:import> --%>
 	
 		
 </body>

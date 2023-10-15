@@ -8,7 +8,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-//@WebServlet("/JspServlet")
+@WebServlet("/JspServlet")
 public class JspServlet extends HttpServlet {
 	
    
@@ -18,7 +18,10 @@ public class JspServlet extends HttpServlet {
 		
 		String name = "Si Henni";
 		
-		request.setAttribute("label", name);
+		Student s = new Student(1, "Mohamed");
+		
+		
+		request.setAttribute("Student", s);
 		RequestDispatcher rd = request.getRequestDispatcher("Index.jsp");
 		rd.forward(request, response);
 		
