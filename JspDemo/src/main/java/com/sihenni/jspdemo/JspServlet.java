@@ -7,6 +7,8 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Arrays;
+import java.util.List;
 
 @WebServlet("/JspServlet")
 public class JspServlet extends HttpServlet {
@@ -16,12 +18,15 @@ public class JspServlet extends HttpServlet {
 	
 		//JSP implementation
 		
-		String name = "Si Henni";
+		List  <Student> studs = Arrays.asList(new Student(1,"Mohamed")
+				, new Student(2,"Omar"), new Student(3,"Ali"));
 		
-		Student s = new Student(1, "Mohamed");
+		//String name = "Si Henni";
+		
+		//Student s = new Student(1, "Mohamed");
 		
 		
-		request.setAttribute("Student", s);
+		request.setAttribute("Students", studs);
 		RequestDispatcher rd = request.getRequestDispatcher("Index.jsp");
 		rd.forward(request, response);
 		

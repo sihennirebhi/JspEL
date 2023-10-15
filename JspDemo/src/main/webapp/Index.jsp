@@ -20,7 +20,12 @@
 	<!-- using EL -->
 	<!--${label}-->
 	
-	<c:out value="${Student}" />
+	<%-- <c:out value="${Students}" /> --%>
+	<c:forEach items = "${Students}" var ="s">
+		"${s}" <br/>
+		"${s.number}" <br/>
+		"${s.name}" <br/>
+	</c:forEach>
 	<%-- <c:import url="http://www.facebook.com"></c:import> --%>
 	
 		
